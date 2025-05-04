@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<BTS>
+    <id>uint32</id>
+    <name>string</name>
+    <MGMT>
+        <MetricJob>
+            <isFinished>boolean</isFinished>
+            <jobId>uint32</jobId>
+        </MetricJob>
+        <CPLANE>
+        </CPLANE>
+    </MGMT>
+    <HWE>
+        <RU>
+            <hwRevision>string</hwRevision>
+            <id>uint32</id>
+            <ipv4Address>string</ipv4Address>
+            <manufacturerName>string</manufacturerName>
+        </RU>
+    </HWE>
+    <COMM>
+    </COMM>
+</BTS>
