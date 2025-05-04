@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<XMI xmi.version="1.1" xmlns:UML="omg.org/UML1.3" timestamp="2024-05-11 12:34:56">
+    <Class name="BTS" isRoot="true" documentation="Base Transmitter Station. This is the only root class">
+        <Attribute name="id" type="uint32" />
+        <Attribute name="name" type="string" />
+    </Class>
+    <Class name="MGMT" isRoot="false" documentation="Management related">
+    </Class>
+    <Class name="COMM" isRoot="false" documentation="Communication services">
+    </Class>
+    <Class name="MetricJob" isRoot="false" documentation="Perfomance metric job">
+        <Attribute name="isFinished" type="boolean" />
+        <Attribute name="jobId" type="uint32" />
+    </Class>
+    <Class name="CPLANE" isRoot="false" documentation="Perfomance metric job">
+    </Class>
+    <Class name="RU" isRoot="false" documentation="Radio Unit hardware element">
+        <Attribute name="hwRevision" type="string" />
+        <Attribute name="id" type="uint32" />
+        <Attribute name="ipv4Address" type="string" />
+        <Attribute name="manufacturerName" type="string" />
+    </Class>
+    <Class name="HWE" isRoot="false" documentation="Hardware equipment">
+    </Class>
+    <Aggregation source="MGMT" target="BTS" sourceMultiplicity="1" targetMultiplicity="1" />
+    <Aggregation source="HWE" target="BTS" sourceMultiplicity="1" targetMultiplicity="1" />
+    <Aggregation source="COMM" target="BTS" sourceMultiplicity="1" targetMultiplicity="1" />
+    <Aggregation source="MetricJob" target="MGMT" sourceMultiplicity="0..100" targetMultiplicity="1" />
+    <Aggregation source="CPLANE" target="MGMT" sourceMultiplicity="0..1" targetMultiplicity="1" />
+    <Aggregation source="RU" target="HWE" sourceMultiplicity="0..42" targetMultiplicity="1" />
+</XMI>
